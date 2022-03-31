@@ -1,0 +1,12 @@
+<table>
+    <tr>
+        <td>Name</td> <td>Brand</td><td>Action</td>
+    </tr>
+    <tr *ngFor="let p of products">
+        <td>{{p.name}}</td>
+        <td>{{p.brand}}</td>
+        <td><a routerLink="/edit/{{p._id}}">Edit</a>
+        <button (click)="deleteProduct(p._id)">Delete</button>
+        </td>
+    </tr>
+</table>

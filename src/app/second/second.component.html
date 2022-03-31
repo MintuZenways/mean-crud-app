@@ -1,0 +1,67 @@
+<h1>Reactive Form Validation</h1>
+
+<form [formGroup]="form" (ngSubmit)="afterSubmit()">
+    <p>
+        <input type="text" id="name" formControlName="name" placeholder="Enter Name"  />
+    </p>
+
+    <div *ngIf="f['name'].invalid && (f['name'].touched || f['name'].dirty)">
+
+        <div *ngIf="f['name'].errors && f['name'].errors['required']">
+         Name is required
+        </div>
+    </div>
+
+        <!--div *ngIf="f['name'].errors && f['name'].errors['minlength']">
+            Name should be 5 chars long
+           </div>
+
+           <div *ngIf="f['name'].errors && f['name'].errors['pattern']">
+            Name can have only alphabets
+           </div-->
+
+           <p>
+            <input type="text" id="brand" formControlName="brand" placeholder="Enter Brand"  />
+        </p>
+    
+        <div *ngIf="f['brand'].invalid && (f['brand'].touched || f['brand'].dirty)">
+    
+            <div *ngIf="f['brand'].errors && f['brand'].errors['required']">
+             Brand is required
+            </div>
+        </div>
+
+        <p>
+            <input type="text" id="model" formControlName="model" placeholder="Enter Model" />
+        </p>
+    
+        <div *ngIf="f['model'].invalid && (f['model'].touched || f['model'].dirty)">
+    
+            <div *ngIf="f['model'].errors && f['model'].errors['required']">
+             Model is required
+            </div>
+        </div>
+        <p>
+            <input type="text" id="price" formControlName="price" placeholder="Enter Price"  />
+        </p>
+    
+        <div *ngIf="f['price'].invalid && (f['price'].touched || f['price'].dirty)">
+    
+            <div *ngIf="f['price'].errors && f['price'].errors['required']">
+             Price is required
+            </div>
+        </div>
+        <p>
+            <input type="text" id="quantity" formControlName="quantity" placeholder="Enter Quantity"  />
+        </p>
+    
+        <div *ngIf="f['quantity'].invalid && (f['quantity'].touched || f['name'].dirty)">
+    
+            <div *ngIf="f['quantity'].errors && f['quantity'].errors['required']">
+             Quantity is required
+            </div>
+        </div>
+        
+
+        <p><button type="submit">Submit</button></p>
+</form>

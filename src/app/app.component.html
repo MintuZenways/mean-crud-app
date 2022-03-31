@@ -1,0 +1,46 @@
+<h1>Lazy Loading Example</h1>
+<div>
+  <a routerLink="first">First Module</a> | 
+  <a routerLink="second">Second Module</a> |
+  <a routerLink="users">All Users</a>
+
+</div>
+
+<router-outlet></router-outlet>
+<!--form name="form" #frm="ngForm" (ngSubmit)="frm.valid && afterSubmit()">
+  <p>
+    <input type="text" name="name" [(ngModel)]="user.name" #name="ngModel" required minlength="5" pattern="^[a-zA-Z_ ]+$" />
+  </p>
+  <div *ngIf="name.invalid && (name.touched || name.dirty)">
+    <div *ngIf="name.errors?.['required']">
+      <strong>Name field is required</strong>
+    </div>
+
+    <div *ngIf="name.errors?.['minlength']">
+      <strong>Name should have at least 5 characters.</strong>
+    </div>
+    <div *ngIf="name.errors?.['pattern']">
+      <strong>Name can have alphabets only.</strong>
+    </div>
+  </div>
+
+  <p>
+    <input type="text" name="city" [(ngModel)]="user.city" #city="ngModel" required minlength="5" pattern="^[a-zA-Z_ ]+$" />
+  </p>
+  <div *ngIf="city.invalid && (name.touched || name.dirty)">
+    <div *ngIf="name.errors?.['required']">
+      <strong>City field is required</strong>
+    </div>
+
+    <div *ngIf="city.errors?.['minlength']">
+      <strong>City should have at least 5 characters.</strong>
+    </div>
+    <div *ngIf="city.errors?.['pattern']">
+      <strong>City can have alphabets only.</strong>
+    </div>
+  </div>
+<p>
+  <button type="submit" [disabled]="frm.invalid">Submit</button>
+</p>
+</form-->
+
